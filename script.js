@@ -28,7 +28,7 @@ document.querySelectorAll('.service-toggle').forEach(btn => {
   });
 });
 
-// ── Contact form → mailto (via JS, sans avertissement navigateur) ─
+// ── Contact form → mailto ──────────────────────────────
 document.getElementById('contactForm').addEventListener('submit', function(e) {
   e.preventDefault();
   const d = new FormData(this);
@@ -40,5 +40,17 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     'Besoin : '     + (d.get('besoin')     || '') + '\n\n' +
     'Message :\n'   + (d.get('message')    || '')
   );
-  window.location.href = 'mailto:l.leyoudec@gmail.com?subject=' + subject + '&body=' + body;
+
+  // Clic sur lien invisible pour ne pas scroller la page
+  const a = document.createElement('a');
+  a.href = 'mailto:l.leyoudec@gmail.com?subject=' + subject + '&body=' + body;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+
+  // Confirmation visible
+  const success = document.getElementById('formSuccess');
+  success.classList.add('visible');
+  success.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  this.reset();
 });
