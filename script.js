@@ -28,32 +28,5 @@ document.querySelectorAll('.service-toggle').forEach(btn => {
   });
 });
 
-// ── Contact form → Formspree ───────────────────────────
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  const btn = this.querySelector('button[type="submit"]');
-  const success = document.getElementById('formSuccess');
-
-  btn.textContent = 'Envoi en cours…';
-  btn.disabled = true;
-
-  fetch(this.action, {
-    method: 'POST',
-    body: new FormData(this),
-    headers: { 'Accept': 'application/json' }
-  })
-  .then(res => {
-    if (res.ok) {
-      success.classList.add('visible');
-      btn.textContent = 'Message envoyé ✓';
-      this.reset();
-    } else {
-      btn.textContent = 'Erreur — réessayez';
-      btn.disabled = false;
-    }
-  })
-  .catch(() => {
-    btn.textContent = 'Erreur — réessayez';
-    btn.disabled = false;
-  });
-});
+// ── Contact form → mailto ──────────────────────────────
+// La soumission ouvre le client mail du visiteur avec le message pré-rempli.
