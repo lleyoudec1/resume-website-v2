@@ -28,29 +28,33 @@ document.querySelectorAll('.service-toggle').forEach(btn => {
   });
 });
 
-// ── Contact form → mailto ──────────────────────────────
-document.getElementById('contactForm').addEventListener('submit', function(e) {
+// ── Contact form → Web3Forms ───────────────────────────
+document.getElementById('contactForm').addEventListener('submit', async function(e) {
   e.preventDefault();
-  const d = new FormData(this);
-  const subject = encodeURIComponent('Message depuis le site — ' + (d.get('nom') || ''));
-  const body = encodeURIComponent(
-    'Nom : '        + (d.get('nom')        || '') + '\n' +
-    'Email : '      + (d.get('email')      || '') + '\n' +
-    'Entreprise : ' + (d.get('entreprise') || '') + '\n' +
-    'Besoin : '     + (d.get('besoin')     || '') + '\n\n' +
-    'Message :\n'   + (d.get('message')    || '')
-  );
-
-  // Clic sur lien invisible pour ne pas scroller la page
-  const a = document.createElement('a');
-  a.href = 'mailto:l.leyoudec@gmail.com?subject=' + subject + '&body=' + body;
-  document.body.appendChild(a);
-  a.click();
-  document.body.removeChild(a);
-
-  // Confirmation visible
+  const btn = this.querySelector('button[type="submit"]');
   const success = document.getElementById('formSuccess');
-  success.classList.add('visible');
-  success.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-  this.reset();
+
+  btn.textContent = 'Envoi en cours…';
+  btn.disabled = true;
+
+  try {
+    const res = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(Object.fromEntries(new FormData(this)))
+    });
+    const json = await res.json();
+    if (json.success) {
+      success.classList.add('visible');
+      success.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      btn.textContent = 'Message envoyé ✓';
+      this.reset();
+    } else {
+      btn.textContent = 'Erreur — réessayez';
+      btn.disabled = false;
+    }
+  } catch {
+    btn.textContent = 'Erreur — réessayez';
+    btn.disabled = false;
+  }
 });
