@@ -28,16 +28,32 @@ document.querySelectorAll('.service-toggle').forEach(btn => {
   });
 });
 
-// ── Contact form (mock submit) ─────────────────────────
+// ── Contact form → Formspree ───────────────────────────
 document.getElementById('contactForm').addEventListener('submit', function(e) {
   e.preventDefault();
-  const success = document.getElementById('formSuccess');
   const btn = this.querySelector('button[type="submit"]');
+  const success = document.getElementById('formSuccess');
+
   btn.textContent = 'Envoi en cours…';
   btn.disabled = true;
-  setTimeout(() => {
-    success.classList.add('visible');
-    btn.textContent = 'Message envoyé ✓';
-    this.reset();
-  }, 900);
+
+  fetch(this.action, {
+    method: 'POST',
+    body: new FormData(this),
+    headers: { 'Accept': 'application/json' }
+  })
+  .then(res => {
+    if (res.ok) {
+      success.classList.add('visible');
+      btn.textContent = 'Message envoyé ✓';
+      this.reset();
+    } else {
+      btn.textContent = 'Erreur — réessayez';
+      btn.disabled = false;
+    }
+  })
+  .catch(() => {
+    btn.textContent = 'Erreur — réessayez';
+    btn.disabled = false;
+  });
 });
