@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lénaïk Leyoudec — Chief of Staff pour dirigeants de PME</title>
+  <meta name="description" content="Consultant Chief of Staff pour dirigeants de PME et organisations en croissance. Allègement de la charge mentale, alignement stratégique, croissance d'équipe." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ─── NAV ──────────────────────────────────────────────── -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">LL</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#services" onclick="closeMenu()">Services</a></li>
+        <li><a href="#resultats" onclick="closeMenu()">Résultats</a></li>
+        <li><a href="#parcours" onclick="closeMenu()">Parcours</a></li>
+        <li><a href="#tarifs" onclick="closeMenu()">Tarifs</a></li>
+        <li><a href="#contact" class="nav-cta" onclick="closeMenu()">Me contacter</a></li>
+      </ul>
+      <button class="nav-burger" id="navBurger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ─── HERO ─────────────────────────────────────────────── -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="container">
+      <div class="hero-tag fade-in">Disponible pour de nouvelles missions · Nantes · Paris 🇫🇷</div>
+      <h1 class="fade-in delay-1">Bonjour,<br />moi c'est <em>Lénaïk</em>&nbsp;!</h1>
+      <p class="hero-chapeau fade-in delay-2">
+        Pendant les <strong>12 dernières années</strong> à mener des projets numériques pour des acteurs industriels, académiques ou associatifs, j'ai identifié l'endroit où mes compétences avaient le plus d'impact : le <strong>soutien du dirigeant de PME</strong>.
+      </p>
+      <p class="hero-approche fade-in delay-3">
+        Mon approche : transformer toute frustration&nbsp;😤 ou rouage grippé&nbsp;⚙️<br class="d-none-sm" />
+        en levier pour l'action&nbsp;👉, pour un retour en piste rapide&nbsp;🏎️
+      </p>
+      <div class="hero-actions fade-in delay-4">
+        <a href="#contact" class="btn btn-primary">Prendre rendez-vous</a>
+        <a href="#services" class="btn btn-ghost">Voir mes services →</a>
+      </div>
+    </div>
+    <div class="hero-scroll"><div class="scroll-track"></div></div>
+  </section>
+
+  <!-- ─── ACCROCHE CHIFFRES ─────────────────────────────────── -->
+  <section id="chiffres" class="section-light">
+    <div class="container chiffres-grid">
+      <div class="chiffre reveal">
+        <span class="chiffre-n">12<span class="chiffre-unit">ans</span></span>
+        <span class="chiffre-l">d'expérience en projets numériques</span>
+      </div>
+      <div class="chiffre-sep reveal delay-1"></div>
+      <div class="chiffre reveal delay-1">
+        <span class="chiffre-n">3<span class="chiffre-unit">ans</span></span>
+        <span class="chiffre-l">Chief of Staff de fondateur deeptech</span>
+      </div>
+      <div class="chiffre-sep reveal delay-2"></div>
+      <div class="chiffre reveal delay-2">
+        <span class="chiffre-n">75k<span class="chiffre-unit">€/an</span></span>
+        <span class="chiffre-l">de subventions obtenues en moyenne</span>
+      </div>
+      <div class="chiffre-sep reveal delay-3"></div>
+      <div class="chiffre reveal delay-3">
+        <span class="chiffre-n">−2h<span class="chiffre-unit">/j</span></span>
+        <span class="chiffre-l">de charge mentale libérée pour le dirigeant</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SERVICES ─────────────────────────────────────────── -->
+  <section id="services">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Ce que je fais</span>
+        <h2>Quel est votre vrai problème ?</h2>
+        <p class="section-sub">Chaque mission part d'un manque ressenti. Je le transforme en plan d'action concret.</p>
+      </div>
+
+      <div class="services-grid">
+
+        <!-- Bloc 1 -->
+        <div class="service-card reveal" data-index="0">
+          <div class="service-header">
+            <div class="service-manque">Vous manquez de</div>
+            <div class="service-mot">TEMPS</div>
+            <div class="service-icon">⏱️</div>
+          </div>
+          <h3>Allègement de la charge mentale du dirigeant</h3>
+          <p class="service-roi"><strong>ROI :</strong> Le dirigeant récupère en moyenne <strong>1h de charge mentale par jour</strong> après implémentation du système complet.</p>
+          <button class="service-toggle" aria-expanded="false">Voir la méthode <span class="toggle-arrow">↓</span></button>
+          <div class="service-detail">
+            <div class="detail-section">
+              <h4>Méthode</h4>
+              <p>Un état des lieux personnalisé est initié : <em>shadowing</em>, analyse des mails entrants, identification des goulots d'étranglement. La restitution fournit des suggestions d'outils (IA, automatisation) et d'arbitrages organisationnels. Je coordonne ensuite la mise en place jusqu'à la vitesse de croisière.</p>
+            </div>
+            <div class="detail-section">
+              <h4>Résultats concrets</h4>
+              <ul>
+                <li>De &gt;1 000 à 0 mails non lus, sans perte d'opportunité</li>
+                <li>Gain de temps substantiel (&gt;1h/j) par fléchage, synthèse et automatisation</li>
+                <li>Allègement du poids des arbitrages grâce à la rationalisation du circuit décisionnel</li>
+                <li>Récupération de temps de réflexion stratégique</li>
+              </ul>
+            </div>
+            <div class="detail-skills">
+              <span>Gestion du temps</span><span>Excellence opérationnelle</span><span>IA Agents</span><span>Workflows métiers</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bloc 2 -->
+        <div class="service-card reveal delay-1" data-index="1">
+          <div class="service-header">
+            <div class="service-manque">Vous manquez de</div>
+            <div class="service-mot">VISIBILITÉ</div>
+            <div class="service-icon">🔭</div>
+          </div>
+          <h3>Alignement des parties prenantes autour d'un récit commun</h3>
+          <p class="service-roi"><strong>ROI :</strong> Le CODIR sait où il va, quel est l'itinéraire et <strong>combien d'essence reste-t-il dans la voiture</strong>.</p>
+          <button class="service-toggle" aria-expanded="false">Voir la méthode <span class="toggle-arrow">↓</span></button>
+          <div class="service-detail">
+            <div class="detail-section">
+              <h4>Méthode</h4>
+              <p>Rédaction d'un document <em>Core Story</em> (origines, chemin parcouru, destination commune). Extraction des indicateurs clés adaptés à la méthode choisie (OKR, KPI…). Dissémination dans l'organisation et correction de trajectoire en continu.</p>
+            </div>
+            <div class="detail-section">
+              <h4>Résultats concrets</h4>
+              <ul>
+                <li>Augmentation de l'engagement des équipes après diffusion interne</li>
+                <li>Facteur différenciant lors de l'onboarding — rassure les nouveaux collaborateurs</li>
+                <li>Réduction sensible de la durée des CODIR</li>
+                <li>Indicateurs qui rassurent les parties prenantes externes (actionnaires, conseillers)</li>
+              </ul>
+            </div>
+            <div class="detail-skills">
+              <span>Diagnostic organisationnel</span><span>Storytelling d'entreprise</span><span>Dashboard KPI</span><span>OKR</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bloc 3 -->
+        <div class="service-card reveal delay-2" data-index="2">
+          <div class="service-header">
+            <div class="service-manque">Vous manquez de</div>
+            <div class="service-mot">ENGAGEMENT</div>
+            <div class="service-icon">🤝</div>
+          </div>
+          <h3>Comblement du fossé culturel entre cadres et opérationnels</h3>
+          <p class="service-roi"><strong>ROI :</strong> La perception d'une dissonance entre équipes et CODIR s'atténue, l'<strong>engagement moyen des collaborateurs s'améliore</strong>.</p>
+          <button class="service-toggle" aria-expanded="false">Voir la méthode <span class="toggle-arrow">↓</span></button>
+          <div class="service-detail">
+            <div class="detail-section">
+              <h4>Méthode</h4>
+              <p>Entretiens avec un échantillon de collaborateurs pour qualifier le fossé culturel. Feuille de route d'actions à court et moyen termes : culture de l'écrit, revues régulières inter-équipes, pratiques adaptées à l'organisation pour minimiser toute résistance au changement.</p>
+            </div>
+            <div class="detail-section">
+              <h4>Résultats concrets</h4>
+              <ul>
+                <li>Implication plus forte dans les moments collectifs (questions, suggestions)</li>
+                <li>Augmentation de l'<em>Employee Net Promoter Score</em></li>
+                <li>Diminution du turnover sur le moyen terme</li>
+              </ul>
+            </div>
+            <div class="detail-skills">
+              <span>Diagnostic organisationnel</span><span>Médiation inter-métiers</span><span>Prise de parole</span><span>Documentation</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bloc 4 -->
+        <div class="service-card reveal" data-index="3">
+          <div class="service-header">
+            <div class="service-manque">Vous manquez de</div>
+            <div class="service-mot">STAFF</div>
+            <div class="service-icon">👥</div>
+          </div>
+          <h3>Faire croître l'équipe tout en réduisant le turnover</h3>
+          <p class="service-roi"><strong>ROI :</strong> L'hypercroissance de l'équipe <strong>ne s'accompagne pas d'une hausse du turnover</strong>.</p>
+          <button class="service-toggle" aria-expanded="false">Voir la méthode <span class="toggle-arrow">↓</span></button>
+          <div class="service-detail">
+            <div class="detail-section">
+              <h4>Méthode</h4>
+              <p>Esquisse du portrait humain de l'organisation → référentiel de compétences (techniques + humaines + valeurs cœur) → grille de recrutement. Ce cadrage de l'ADN permet de scaler en partant du déjà-là.</p>
+            </div>
+            <div class="detail-section">
+              <h4>Résultats concrets</h4>
+              <ul>
+                <li>Onboarding plus rapide — les nouveaux s'immergent plus vite</li>
+                <li>Entretiens annuels mieux vécus, construits sur le référentiel</li>
+                <li>Gain de temps sur le cadrage des cabinets de recrutement</li>
+                <li>Baisse du taux de rupture de période d'essai</li>
+              </ul>
+            </div>
+            <div class="detail-skills">
+              <span>GPEC</span><span>Profilage candidats</span><span>Pilotage ATS</span><span>Storytelling RH</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bloc 5 -->
+        <div class="service-card reveal delay-1" data-index="4">
+          <div class="service-header">
+            <div class="service-manque">Vous manquez de</div>
+            <div class="service-mot">SUBVENTIONS</div>
+            <div class="service-icon">💶</div>
+          </div>
+          <h3>Capter tout soutien financier public éligible</h3>
+          <p class="service-roi"><strong>ROI :</strong> Vue d'ensemble sur les aides publiques et plan d'action associé, <strong>sans recrutement supplémentaire</strong>.</p>
+          <button class="service-toggle" aria-expanded="false">Voir la méthode <span class="toggle-arrow">↓</span></button>
+          <div class="service-detail">
+            <div class="detail-section">
+              <h4>Méthode</h4>
+              <p>Diagnostic de l'organisation + veille fine des leviers français et européens → liste des aides pertinentes → plan d'action par levier activé (parties prenantes, livrables, calendrier). Formation d'acteurs internes + soutien opérationnel inclus.</p>
+            </div>
+            <div class="detail-section">
+              <h4>Résultats concrets</h4>
+              <ul>
+                <li>Agrément Crédit Impôt Recherche obtenu auprès du MESR</li>
+                <li><strong>75 000€ de subventions</strong> obtenues en moyenne annuellement (2019–2023), hors CIR</li>
+              </ul>
+            </div>
+            <div class="detail-skills">
+              <span>CIR / CII / JEI</span><span>Financements européens</span><span>ANR PIA</span><span>Modélisation financière</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bloc 6 -->
+        <div class="service-card reveal delay-2" data-index="5">
+          <div class="service-header">
+            <div class="service-manque">Vous manquez d'</div>
+            <div class="service-mot">EXCELLENCE</div>
+            <div class="service-icon">🎯</div>
+          </div>
+          <h3>Placer la qualité au centre de l'organisation</h3>
+          <p class="service-roi"><strong>ROI :</strong> Vos processus et votre produit gravitent autour d'un <strong>référentiel unique : la satisfaction client</strong>.</p>
+          <button class="service-toggle" aria-expanded="false">Voir la méthode <span class="toggle-arrow">↓</span></button>
+          <div class="service-detail">
+            <div class="detail-section">
+              <h4>Méthode</h4>
+              <p>Diagnostic qualité (ventes, opérations, produit, tech) → axes de montée en qualité → plan d'action (prérequis, méthodologie, livrables, calendrier) → accompagnement opérationnel + formation des parties prenantes internes.</p>
+            </div>
+            <div class="detail-section">
+              <h4>Résultats concrets</h4>
+              <ul>
+                <li>−70% d'anomalies entre deux versions majeures logicielles</li>
+                <li>−50% de délai de livraison (2018)</li>
+                <li>−30% de temps sur la campagne de tests trimestrielle (2021)</li>
+              </ul>
+            </div>
+            <div class="detail-skills">
+              <span>ISO 9001</span><span>ISO 27001</span><span>Assurance qualité</span><span>Cartographie processus</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── RÉSULTATS ─────────────────────────────────────────── -->
+  <section id="resultats" class="section-dark">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label light">Preuves par les chiffres</span>
+        <h2>Des résultats, pas des promesses</h2>
+        <p class="section-sub">Issus de mes accompagnements réels, mesurés et vérifiables.</p>
+      </div>
+      <div class="resultats-grid">
+        <div class="resultat-card reveal">
+          <div class="r-big">−2h/j</div>
+          <div class="r-title">Charge mentale du dirigeant</div>
+          <p>Via shadowing, automatisation et rationalisation du circuit décisionnel.</p>
+        </div>
+        <div class="resultat-card reveal delay-1">
+          <div class="r-big">75k€</div>
+          <div class="r-title">Subventions obtenues / an en moyenne</div>
+          <p>Entre 2019 et 2023, pour une PME d'édition logicielle — hors Crédit Impôt Recherche.</p>
+        </div>
+        <div class="resultat-card reveal delay-2">
+          <div class="r-big">+50%</div>
+          <div class="r-title">Croissance de l'équipe tech</div>
+          <p>Sans augmentation du turnover, grâce à un référentiel de compétences structurant.</p>
+        </div>
+        <div class="resultat-card reveal">
+          <div class="r-big">−70%</div>
+          <div class="r-title">Anomalies logicielles entre versions</div>
+          <p>Entraînant −50% de délai de livraison — démarche qualité appliquée à une app B2B.</p>
+        </div>
+        <div class="resultat-card reveal delay-1">
+          <div class="r-big">−20j</div>
+          <div class="r-title">Délai de recouvrement (DSO)</div>
+          <p>Via l'implémentation CRM et la refonte des processus de facturation (−2h/semaine).</p>
+        </div>
+        <div class="resultat-card reveal delay-2">
+          <div class="r-big">12+</div>
+          <div class="r-title">Publications académiques</div>
+          <p>Dans des livres, revues scientifiques et actes de conférences — en tant que chercheur associé à l'UTC depuis 2017.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── PARCOURS ──────────────────────────────────────────── -->
+  <section id="parcours" class="section-light">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Expérience &amp; Formation</span>
+        <h2>D'où viennent ces réflexes ?</h2>
+      </div>
+      <div class="timeline">
+
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-date">2022 — 2026</div>
+          <div class="tl-body">
+            <span class="tl-badge">Chief of Staff</span>
+            <h3>Chief of Staff du CEO</h3>
+            <h4>implid Ventures / Perfect Memory · Plateforme IA Reasoning</h4>
+            <p>Coordination de 3 instances de gouvernance (Comex, Conseil scientifique, Comité Open Source). Suivi des KPIs de tous les départements. Représentation du CEO. Missions parallèles : DRH intérimaire (+50% équipe tech sans hausse du turnover) et DAF intérimaire (subventions, financement public). Projets spéciaux : data room VC, partenariats Hyperscalers, ISO 9001/27001, B-Corp.</p>
+          </div>
+        </div>
+
+        <div class="tl-item reveal delay-1">
+          <div class="tl-dot"></div>
+          <div class="tl-date">2018 — 2022</div>
+          <div class="tl-body">
+            <span class="tl-badge">Qualité &amp; SalesOps</span>
+            <h3>Consultant Assurance Qualité Logicielle</h3>
+            <h4>implid Ventures / Perfect Memory · Plateforme IA</h4>
+            <p>Pilotage des activités de vérification de la suite logicielle. −70% d'anomalies, −50% de délai de livraison. Implémentation CRM et SalesOps : −20 jours de DSO, −2h/semaine sur la facturation.</p>
+          </div>
+        </div>
+
+        <div class="tl-item reveal delay-2">
+          <div class="tl-dot"></div>
+          <div class="tl-date">2013 — 2018</div>
+          <div class="tl-body">
+            <span class="tl-badge">Stratégie &amp; BD</span>
+            <h3>Spécialiste Marché Culture</h3>
+            <h4>Perfect Memory LLC · Secteur Media &amp; Culture</h4>
+            <p>Contribution à l'acquisition des premiers clients, à la livraison de projets et à la diversification hors marché Broadcast.</p>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-dot tl-dot--edu"></div>
+          <div class="tl-date">2025</div>
+          <div class="tl-body">
+            <span class="tl-badge tl-badge--edu">Formation</span>
+            <h3>Executive MBA · Spécialisation Finance d'entreprise</h3>
+            <h4>Université Panthéon-Sorbonne — IAE Paris Sorbonne</h4>
+          </div>
+        </div>
+
+        <div class="tl-item reveal delay-1">
+          <div class="tl-dot tl-dot--edu"></div>
+          <div class="tl-date">2017</div>
+          <div class="tl-body">
+            <span class="tl-badge tl-badge--edu">Formation</span>
+            <h3>Doctorat en Sciences de la Communication</h3>
+            <h4>Université de technologie de Compiègne (UTC)</h4>
+            <p>Thèse : <a href="https://bibliotheque.utc.fr/Default/doc/SYRACUSE/535442/l-editorialisation-du-film-de-famille" target="_blank" class="tl-link"><em>« Enrichissement sémantique des archives numériques »</em></a>. Bourse CIFRE nationale. Chercheur associé et membre extérieur du Conseil du département TSH depuis 2017 — plus de 12 publications (livres, revues, actes de conférences).</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── TARIFS ────────────────────────────────────────────── -->
+  <section id="tarifs">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Tarification</span>
+        <h2>Transparent sur le budget</h2>
+        <p class="section-sub">Deux modes d'intervention, adaptés à votre besoin.</p>
+      </div>
+      <div class="tarifs-grid">
+        <div class="tarif-card reveal">
+          <div class="tarif-icon">📦</div>
+          <h3>Mission au forfait</h3>
+          <p class="tarif-desc">Pour des actions délimitées dans le temps et les livrables : diagnostic, mise en place d'un référentiel, dossier de subvention, démarche qualité…</p>
+          <ul class="tarif-includes">
+            <li>Périmètre défini en amont</li>
+            <li>Livrables précis et mesurables</li>
+            <li>Budget maîtrisé dès le départ</li>
+            <li>Rapport de fin de mission inclus</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline">Demander un devis</a>
+        </div>
+        <div class="tarif-card tarif-card--featured reveal delay-1">
+          <div class="tarif-badge-top">Recommandé</div>
+          <div class="tarif-icon">🔄</div>
+          <h3>Accompagnement long cours (TJM)</h3>
+          <p class="tarif-desc">Pour un soutien continu au dirigeant : Chief of Staff fractionnel, bras droit opérationnel, présence régulière dans l'organisation.</p>
+          <ul class="tarif-includes">
+            <li>Nombre de jours défini en commun</li>
+            <li>Flexibilité selon l'actualité</li>
+            <li>Présence et réactivité garanties</li>
+            <li>Bilan mensuel systématique</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary">En savoir plus</a>
+        </div>
+        <div class="tarif-card reveal delay-2">
+          <div class="tarif-icon">🎯</div>
+          <h3>Pas sûr de ce dont vous avez besoin ?</h3>
+          <p class="tarif-desc">Un premier échange de 30 minutes suffit souvent pour clarifier le besoin, le bon format d'intervention et une estimation budgétaire.</p>
+          <ul class="tarif-includes">
+            <li>Appel découverte gratuit</li>
+            <li>Diagnostic rapide offert</li>
+            <li>Aucun engagement</li>
+          </ul>
+          <a href="https://calendly.com/l-leyoudec/parlons-ensemble-des-enjeux-de-votre-organisation" target="_blank" class="btn btn-outline">Réserver un créneau</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CONTACT ───────────────────────────────────────────── -->
+  <section id="contact" class="section-dark">
+    <div class="container contact-grid">
+      <div class="contact-left reveal">
+        <span class="section-label light">Contact</span>
+        <h2>Parlons de votre organisation</h2>
+        <p>Décrivez-moi votre situation en quelques lignes. Je vous réponds sous 24h pour convenir d'un premier échange.</p>
+        <a href="https://calendly.com/l-leyoudec/parlons-ensemble-des-enjeux-de-votre-organisation" target="_blank" class="btn btn-primary calendly-btn">
+          📅 Réserver un créneau sur Calendly
+        </a>
+        <div class="contact-coords">
+          <a href="https://www.linkedin.com/in/lleyoudec" target="_blank" class="coord-item">
+            <span class="coord-icon">💼</span>
+            linkedin.com/in/lleyoudec
+          </a>
+          <div class="coord-item coord-plain">
+            <span class="coord-icon">📍</span>
+            Nantes · Paris · Remote possible
+          </div>
+        </div>
+      </div>
+      <form class="contact-form reveal delay-1" id="contactForm" action="https://formspree.io/f/xpwzgvqk" method="POST">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="nom">Votre nom</label>
+            <input type="text" id="nom" name="nom" placeholder="Marie Dupont" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Votre email</label>
+            <input type="email" id="email" name="email" placeholder="marie@entreprise.fr" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="entreprise">Entreprise &amp; rôle</label>
+          <input type="text" id="entreprise" name="entreprise" placeholder="Acme SAS · Dirigeante" />
+        </div>
+        <div class="form-group">
+          <label for="besoin">Thématique</label>
+          <select id="besoin" name="besoin">
+            <option value="">Choisir un thème…</option>
+            <option>Allègement charge mentale</option>
+            <option>Alignement stratégique / KPIs</option>
+            <option>Fossé culturel / Engagement</option>
+            <option>Recrutement / Croissance d'équipe</option>
+            <option>Subventions / Financement public</option>
+            <option>Démarche qualité / Certifications</option>
+            <option>Autre / Je ne sais pas encore</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Votre message</label>
+          <textarea id="message" name="message" rows="4" placeholder="Décrivez votre situation en quelques lignes…" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">Envoyer le message →</button>
+        <div class="form-success" id="formSuccess">✓ Message envoyé ! Lénaïk vous répond sous 24h.</div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ────────────────────────────────────────────── -->
+  <footer>
+    <div class="container footer-inner">
+      <span class="footer-name">Lénaïk Leyoudec</span>
+      <span class="footer-sub">Chief of Staff · Consultant stratégique · Nantes, France</span>
+      <div class="footer-links">
+        <a href="https://calendly.com/l-leyoudec/parlons-ensemble-des-enjeux-de-votre-organisation" target="_blank">Calendly</a>
+        <a href="https://www.linkedin.com/in/lleyoudec" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

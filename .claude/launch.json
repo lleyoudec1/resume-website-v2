@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "resume-website-v2",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "3456", "--directory", "C:/Users/lenai/OneDrive/Documents/Claude Code/resume-website-v2"],
+      "port": 3456
+    }
+  ]
+}
