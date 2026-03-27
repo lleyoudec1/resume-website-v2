@@ -28,5 +28,17 @@ document.querySelectorAll('.service-toggle').forEach(btn => {
   });
 });
 
-// ── Contact form → mailto ──────────────────────────────
-// La soumission ouvre le client mail du visiteur avec le message pré-rempli.
+// ── Contact form → mailto (via JS, sans avertissement navigateur) ─
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const d = new FormData(this);
+  const subject = encodeURIComponent('Message depuis le site — ' + (d.get('nom') || ''));
+  const body = encodeURIComponent(
+    'Nom : '        + (d.get('nom')        || '') + '\n' +
+    'Email : '      + (d.get('email')      || '') + '\n' +
+    'Entreprise : ' + (d.get('entreprise') || '') + '\n' +
+    'Besoin : '     + (d.get('besoin')     || '') + '\n\n' +
+    'Message :\n'   + (d.get('message')    || '')
+  );
+  window.location.href = 'mailto:l.leyoudec@gmail.com?subject=' + subject + '&body=' + body;
+});
