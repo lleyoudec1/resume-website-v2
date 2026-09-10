@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://leyoudec-conseil.com/sitemap.xml
