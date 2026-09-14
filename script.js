@@ -28,6 +28,17 @@ document.querySelectorAll('.service-toggle').forEach(btn => {
   });
 });
 
+// ── Recommandations : dépliage des citations longues ───
+document.querySelectorAll('.reco-toggle').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const quote = btn.previousElementSibling;
+    const expanded = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', !expanded);
+    quote.classList.toggle('reco-quote--clamped', expanded);
+    btn.firstChild.textContent = expanded ? 'Voir plus ' : 'Voir moins ';
+  });
+});
+
 // ── Contact form → Web3Forms ───────────────────────────
 document.getElementById('contactForm').addEventListener('submit', async function(e) {
   e.preventDefault();
