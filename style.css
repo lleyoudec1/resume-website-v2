@@ -161,7 +161,7 @@ h1 em{font-style:normal;color:var(--gold)}
 .reco-card:hover{border-color:var(--gold);box-shadow:var(--sh);transform:translateY(-3px)}
 .reco-quote{position:relative;font-size:.94rem;color:var(--text);line-height:1.7;font-style:italic;margin-bottom:2px}
 .reco-quote::before{content:'\201C';font-family:'Playfair Display',Georgia,serif;color:var(--gold);font-size:1.3rem;line-height:0;margin-right:2px}
-.reco-quote--clamped{display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.reco-quote--clamped{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
 .reco-toggle{align-self:flex-start;display:flex;align-items:center;gap:6px;background:none;border:none;padding:12px 0 20px;font-size:.83rem;font-weight:600;color:var(--gold);cursor:pointer}
 .reco-toggle:hover{color:var(--gold-2)}
 .reco-toggle .toggle-arrow{transition:transform var(--t)}
