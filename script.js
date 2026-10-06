@@ -40,7 +40,7 @@ document.querySelectorAll('.reco-toggle').forEach(btn => {
 });
 
 // ── Contact form → Web3Forms ───────────────────────────
-document.getElementById('contactForm').addEventListener('submit', async function(e) {
+document.getElementById('contactForm')?.addEventListener('submit', async function(e) {
   e.preventDefault();
   const btn = this.querySelector('button[type="submit"]');
   const success = document.getElementById('formSuccess');
